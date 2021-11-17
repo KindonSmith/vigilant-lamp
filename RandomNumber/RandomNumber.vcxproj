@@ -24,6 +24,7 @@
     <ProjectGuid>{6f1cbde2-21ad-4956-a88e-25392c16b5b8}</ProjectGuid>
     <RootNamespace>RandomNumber</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Nums</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,19 +141,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="RNG.cpp" />
     <ClCompile Include="main.cpp">
       <ExternalTemplatesDiagnostics Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExternalTemplatesDiagnostics>
     </ClCompile>
     <ClCompile Include="NUMS.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\RNG.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="NUMS.h" />
-    <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
