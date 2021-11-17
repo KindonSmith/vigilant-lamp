@@ -7,16 +7,17 @@
 using namespace std;
 
 int recursiveSum(int val, int limit) {
-	
-    // This function recursively finds the sum of all numbers that are multiples of 3 or 5 below a value
-
-    if (val >= limit) return 0;                     // Break if we reach limit
-
-    if (val % 3 == 0 || val % 5 == 0) {             // If multiple of 3 or 5, add value to sum and recursively iterate
+	/*
+    Method to recursively sum all numbers that are divisible by 3 or 5 between val and limit
+    Takes:      int val, the starting value
+                int limit, the maximum value
+    Returns:    int, the sum of all values between val and limit that are divisible by 3 or 5
+    */
+    if (val >= limit) return 0;                     
+    if (val % 3 == 0 || val % 5 == 0) {             
         return val + recursiveSum(val + 1, limit);
     }
-    return recursiveSum(val + 1, limit);            // We only reach here if we're below the limit and not a multiple - recursively iterate without adding
-
+    return recursiveSum(val + 1, limit);            
 }
 
 int recursiveEvenFibSum(unsigned int left, unsigned int right, int limit) {
