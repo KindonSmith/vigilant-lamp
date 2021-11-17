@@ -1,4 +1,3 @@
-#include "RNG.h"
 #include "NUMS.h"
 #include "TEST.h"
 #include <stdlib.h>

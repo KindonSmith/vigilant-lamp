@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{6f1cbde2-21ad-4956-a88e-25392c16b5b8}</ProjectGuid>
-    <RootNamespace>RandomNumber</RootNamespace>
+    <RootNamespace>Nums</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>Nums</ProjectName>
   </PropertyGroup>
