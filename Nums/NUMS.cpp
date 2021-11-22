@@ -112,7 +112,7 @@ long long targetPrimeNumber(int n) {
             primeNums.push_back(primeNum);
             capacity -= 1;
         }
-        primeNum += 1;
+        primeNum += 2;
     }
     return primeNums.back();
 }
