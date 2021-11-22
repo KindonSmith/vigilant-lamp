@@ -9,8 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.gitattributes
-*.sln
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -72,6 +71,8 @@ ScaffoldingReadMe.txt
 StyleCopReport.xml
 
 # Files built by Visual Studio
+*.gitattributes
+*.sln
 *_i.c
 *_p.c
 *_h.h
