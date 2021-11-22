@@ -3,6 +3,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <cstdint>
+#include <vector>
 
 using namespace std;
 
@@ -39,7 +40,7 @@ int recursiveEvenFibSum(unsigned int left, unsigned int right, int limit) {
     return recursiveEvenFibSum(right, fib, limit);
 }
 
-long long primeNumber(uint64_t num) {
+long long largestPrimeNumber(uint64_t num) {
     /*
     Method to determine the largest prime number for a given integer
     Takes:      uint64_t num, the value that will be checked
@@ -69,7 +70,7 @@ long long lowestCommonMultiple(int max) {
     long long lowestCommonM = 1;
     for (int i = 1; i <= max; i++) {
         if (lowestCommonM % i) {
-            lowestCommonM *= primeNumber(i);
+            lowestCommonM *= largestPrimeNumber(i);
         }
     }
     return lowestCommonM;
@@ -94,4 +95,24 @@ long long sumSquaresDifference() {
     squaredSum *= squaredSum;
 
     return(squaredSum - sumSquared);
+}
+
+long long targetPrimeNumber(int n) {
+    /*
+    * Method to find the nth prime number, where n = any positive real number <= int_max
+    * Takes: int n, the target prime number's index in a list of all prime numbers
+    * Returns: long long, the prime number at the given index (the nth prime number)
+    */
+    int capacity = n;
+    long long primeNum = 1;
+    vector<long long> primeNums = {};
+
+    while (capacity > 0) {
+        if (primeNum == largestPrimeNumber(primeNum)) {
+            primeNums.push_back(primeNum);
+            capacity -= 1;
+        }
+        primeNum += 1;
+    }
+    return primeNums.back();
 }
