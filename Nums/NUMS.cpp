@@ -1,9 +1,5 @@
 #include "NUMS.h"
-#include <stdlib.h>
-#include <iostream>
-#include <stdio.h>
-#include <cstdint>
-#include <vector>
+
 
 using namespace std;
 
@@ -115,4 +111,20 @@ long long targetPrimeNumber(int n) {
         primeNum += 2;
     }
     return primeNums.back();
+}
+
+int largestSubProduct(int length, string series) {
+    /*
+    Method that returns the largest product of all substrings (of size length) for a fixed series of digits
+    Takes: int length, the size of the substring
+    Returns: int, the product of the substring with the largest value
+    */    
+    vector<int> values = {};
+
+    char num;
+    for (int i = 0; i < series.length(); i++) {
+        num = series[i];
+        values.push_back(stoi(&num));
+    }
+
 }
