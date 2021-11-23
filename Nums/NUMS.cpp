@@ -126,5 +126,51 @@ int largestSubProduct(int length, string series) {
         num = series[i];
         values.push_back(stoi(&num));
     }
+    return 0;
+}
 
+double specialPythagoreanTriplet() {
+    /*
+    * Method to return the product of a pythagorean triplet whos sum equals 1000
+    * Takes: n/a
+    * Returns: int, the product of the pythagorean triplet whos sum equals 1000
+    */
+
+    // a^2 + b^2 = c^2
+    // c = sqrt(a^2 + b^2)
+    // a + b + c = 1000
+    // a + b + c - 1000 = 0
+
+    // a + b + sqrt(a^2 + b^2) - 1000 == 0;
+    long double c = 0;
+
+    for (int i = 0; i < 1000/3; i++) {
+        for (int j = 0; j < 1000/2; j++) {
+            c = 1000 - i - j;
+            
+            if (pow(i,2) + pow(j, 2) == pow(c,2)) {
+                cout << "EUREKA" << endl;
+                return i * j * c;
+            }
+        }
+    }
+        
+    return 0;
+}
+
+bool isPerfectSquare(long double x) {
+    if (x >= 0) {
+        long long squareRoot = sqrt(x);
+
+        return (pow(squareRoot, 2) == x);
+    }
+    return false;
+}
+
+long long sumOfPrimes(long limit) {
+    long long sum = 0;
+    for (int i = 0; i < limit; i++) {
+        if (i == largestPrimeNumber(i)) sum += i;
+    }
+    return sum;
 }

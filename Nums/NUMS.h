@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include <math.h>
 
 int recursiveSum(int val, int limit);
 
@@ -21,6 +22,13 @@ long long sumSquaresDifference();
 long long targetPrimeNumber(int n);
 
 int largestSubProduct(int length, std::string series);
+
+double specialPythagoreanTriplet();
+
+bool isPerfectSquare(long double x);
+
+long long sumOfPrimes(long limit);
+
 
 
 #endif
